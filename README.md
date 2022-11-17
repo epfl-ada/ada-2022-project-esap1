@@ -3,8 +3,8 @@
 
 ### A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
 ## Abstract
-Taste is a subjective opinion. This is analysed in this [study](http://i.stanford.edu/~julian/pdfs/icdm2012.pdf). Reviews of beers display the feelings of beer drinkers towards a specific beer. Their corresponding ratings of a beer helps to build an understanding in the variety of taste among consumers. As an extent of this analysis, we wish to explore the external parameters of the reviews and seek connections with the actual ratings. The external parameters are the features of a review that do not have anything to do with the actual beer. We can then study if 
-certain types of people are just more difficult to satisfy than others, regardless of their taste. We use machine learning algorithms to promote the external features of a review that correlates with good/bad ratings. Hence, we obtain the parameters that define more or less critical reviewers. The bias in a review based on how critical the reviewer is was found to be relevant.
+Taste is a subjective opinion. This is demonstrated in this [study](http://i.stanford.edu/~julian/pdfs/icdm2012.pdf). Reviews of beers display the feelings of beer drinkers towards a specific beer. Their corresponding ratings of a beer helps to build an understanding in the variety of taste among consumers. As an extent of this analysis, we wish to explore the external parameters of the reviews and seek connections with the actual ratings. The external parameters are the features of a review that do not have anything to do with the actual beer. We can then study if 
+certain types of people are just more difficult to satisfy than others, regardless of their taste. We use machine learning algorithms to promote the external features of a review that correlates with good/bad ratings. Hence, we obtain the parameters that define more or less critical reviewers. The bias in a review, based on how critical the reviewer is, was found to be relevant.
 
 
 
