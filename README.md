@@ -1,17 +1,26 @@
-# The underlying elements of a review : predicting beer taste without the review.
+# The uncooperative part of taste reviews  
+## Why are some people more critical than others ?
 
-Abstract: 
+### A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
+## Abstract
+Taste is a subjective opinion. This is analysed in this [study](http://i.stanford.edu/~julian/pdfs/icdm2012.pdf). Reviews of beers display the feelings of beer drinkers towards a specific beer. Their corresponding ratings of a beer helps to build an understanding in the variety of taste among consumers. As an extent of this analysis, we wish to explore the external parameters of the reviews and seek connections with the actual ratings. The external parameters are the features of a review that do not have anything to do with the actual beer. We can then study if 
+certain types of people are just more difficult to satisfy than others, regardless of their taste. We use machine learning algorithms to promote the external features of a review that correlates with good/bad ratings. Hence, we obtain the parameters that define more or less critical reviewers. The bias in a review based on how critical the reviewer is was found to be relevant.
 
-This [study](http://i.stanford.edu/~julian/pdfs/icdm2012.pdf) analysed the feelings of beer drinkers through their reviews and linked them to the corresponding user rating of a beer. An extent of this analysis is to explore the external parameters of the reviews and seek connections with the actual ratings. By external parameters, we mean focusing on the features of a review that do not have an obvious link with the rating. These can be the date at which the review was published, the nationality of the reviewer or even the length of the review. This meta data will then be conceived and processed to feed different Machine Learning algorithms. We will use linear regression as well as logistic regression and a ReLU neural network to unveil the possible hidden ties in the dataset. The main intention is to reveal a concealed link between the liking of a beer and special review features.
 
-A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
+
+## Research Questions
+The study is built to tackle these questions:
+  * One
+  * Two 
+  * Three
+  * etc.
 
 
 Research Questions: A list of research questions you would like to address during the project.
 
 
-
 Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
+
 
 
 Methods
