@@ -1,14 +1,14 @@
 ### Repository organization:
 * There are in total four notebooks:
  * The first is <code>Group and make into csv.ipynb</code>. It corresponds to how we transformed our raw data to make it into a handy csv file for pandas
- * The second one <code>first one </code>. It contains the preliminary analysis of the data. That is when we chose to separate the analysis for the two datasets (__BeerAdvocate__ and __RateBeer__). This will be explained later.
- * The third one <code>first one </code> is then a scratch on the building of extra features from BeerAdvocate dataset.
- * The fourth one <code>first one </code> is the same for RateBeer dataset.
+ * The second one <code>Initial_analysis.ipynb</code>. It contains the preliminary analysis of the data. That is when we chose to separate the analysis for the two datasets (__BeerAdvocate__ and __RateBeer__). This will be explained later.
+ * The third one <code>metadata_ba.ipynb</code> is then a scratch on the building of extra features from BeerAdvocate dataset.
+ * The fourth one <code>metadata_rb_ipynb</code> is the same for RateBeer dataset.
 
 # Is deliciousness in the taste buds of the drinker? 
 
 ## Abstract
-It is reasonable to look at the rating someone gives to a beer as being composed of two factors; the actual quality of the beer and their personal taste. But is personal taste actually atomic {of or forming a single irreducible unit or component in a larger system} or, like an actual atom it is composed of sub-parts? 
+It is reasonable to look at the rating someone gives to a beer as being composed of two factors; the actual quality of the beer and their personal taste. But is personal taste actually atomic {formed of a single irreducible unit or component in a larger system} or, like an actual atom it is composed of sub-parts? 
 We feel it might be the latter.
 To see whether our gut instinct is right, we will analyze the Beer Reviews dataset. Focusing on informations other than those directly about the beer and beer quality, we will see if we are able to explain the variance in the ratings for a given beer. Finally we’ll do a deep dive on the aspect that turns out to be the best at explaining said variance.
 
