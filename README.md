@@ -1,7 +1,7 @@
 ### Repository organization:
 * There are in total four notebooks:
  * The first is <code>first one </code>. It corresponds to how we transformed our raw data to make it into a handy csv file for pandas
- * The second one <code>first one </code>. It contains the preliminary analysis of the data. That is when we chose to separate the analysis for the two datasets (__BeerAdvocate__ and __RateBeer__) which will be explained later.
+ * The second one <code>first one </code>. It contains the preliminary analysis of the data. That is when we chose to separate the analysis for the two datasets (__BeerAdvocate__ and __RateBeer__). This will be explained later.
  * The third one is then a scratch on the building of extra features from BeerAdvocate dataset.
  * The fourth one is the same for RateBeer dataset.
 
@@ -37,12 +37,14 @@ Here is a list of the additional datasets we should be using:
 * Analyze and visualize the overall distributions of ratings inter and intra beer, of nationality of users and breweries, of number of raitngs inter and intra beer, 
 * Compare BeerAdvocate and RateBeer to see if they can be merged (they can't, the distribution don't overlap quite significantly)
 * Drop data relative to beers that don't have enough reviews (50 seems like a good value with pur analysis up to date, but we might change it in hindsight)
+* We might focus the analysis on the US for the BeerAdvocate dataset due 73% coverage of the dataset by American users. Also, we think the fact that users are not American might affect the quality of lexicon and hence, our analysis. This is still to be determined.
 
 ### Step 3: Generating metadata & Preparing for process
 
 * Generate the following metadata: (difference between every rating and the average rating for that beer, binary value {1: above average rating, 0: below average rating} for every review (average rating is the average for that beer), Matching between country of beer, number of reviews written by each user, length of review, complexity of lexicon used (inverse of frequency of that word being used in “normal” english), relative time between 1st review for a given beer and the given review, popularity of each beer (number of reviews at the time of review), prevalence of beer drinking in the country of the user.
 * Drop rows for which the metadata is not available (again, we don't have to be stingy)
-* Normalize features
+* Normalize features (the normalization should depend on the distribution from Step1 of the different features.
+* We are still thinking if it would be better to translate the reviews that are not in English (which directly affects review meaning, and lexicon as well). Otherwise, we use complexity of lexicon in the review language but we get less reviews of the same language.
 
 ### Step 4: Applying Machine learning algorithms
 
@@ -74,10 +76,10 @@ Here is a list of the additional datasets we should be using:
 ## Organization within the team
 | | Task |
 | :---:|---|
-| Alessandro| Data scrapping. |
-| Eric | |
-| Paul | |
-| Selim | |
+| Alessandro| Data scrapping. Normalization of features. Enhancement of data visualization|
+| Eric | Creation of metadata and Preparation for process|
+| Paul | Preliminary analysis & Data viz. Extraction of impactful features.|
+| Selim | Linear/Logistic Regression Build-ups. Website Organization|
 
 ## Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
 1) Is it meaningful to do the NN analysis part? We would use a single hidden layer NN: $f(x)=\sum_ic_iReLU(w_ix)$. Then we would define the impact of feature j as $\frac{\sum_i|c_i||w_i|w_{ij}}{\sum_i|c_i||w_i|}$
