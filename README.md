@@ -2,18 +2,20 @@
 ___Why are some people more critical than others ?___
 
 ## Abstract
-Taste is a subjective opinion. This is demonstrated in this [study](http://i.stanford.edu/~julian/pdfs/icdm2012.pdf). Reviews of beers display the feelings of beer drinkers towards a specific beer. Their corresponding ratings of a beer helps to build an understanding in the variety of taste among consumers. As an extent of this analysis, we wish to explore the external parameters of the reviews and seek connections with the actual ratings. The external parameters are the features of a review that do not have anything to do with the actual beer. We can then study if 
-certain types of people are just more difficult to satisfy than others, regardless of their taste. We use machine learning algorithms to promote the external features of a review that correlates with good/bad ratings. Hence, we obtain the parameters that define more or less critical reviewers. Inspecting the bias in a review, based on how critical the reviewer is, was found to be relevant.
+Is deliciousness in the taste buds of the drinker? 
+It is reasonable to look at the rating someone gives to a beer as being composed of two factors; the actual quality of the beer and their personal taste. But is personal taste actually atomic {of or forming a single irreducible unit or component in a larger system} or, like an actual atom it is composed of sub-parts? 
+We feel it might be the latter.
+To see whether our gut instinct is right, we will analyze the Beer Reviews dataset. Focusing on informations other than those directly about the beer and beer quality, we will see if we are able to explain the variance in the ratings for a given beer. Finally we’ll do a deep dive on the aspect that turns out to be the best at explaining said variance.
+
 
 
 
 ## Research Questions
-The study is built to tackle these questions:
-  * What features are good candidates to describe how critical a reviewer is ?
-  * What features are not ? 
-  * Are there any of this metadata that correlates with the rating of the beer? 
-  * If yes, why does this metadata correlates ? Or why are some reviewers harder to satisfy than others ?
-  * Is the origin of the reviewer predictive of the average rating of this reviewer ?
+1) Can our data + new features explain the variance of the ratings for a given beer
+2) Can our data + new features predict whether a review will be above or below the average?
+3) Which of our features is most predictive?
+4) Why could that be the case?
+
 
 
 ## Proposed additional datasets (if any):
