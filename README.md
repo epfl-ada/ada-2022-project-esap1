@@ -59,7 +59,12 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 
 ## Proposed timeline
-
+| | Task |
+| :---:|---|
+| Alessandro| |
+| Eric | |
+| Paul | |
+| Selim | |
 
 ## Organization within the team: A list of internal milestones up until project Milestone P3.
 
