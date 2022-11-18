@@ -26,6 +26,36 @@ List the additional dataset(s) you want to use (if any), and some ideas on how y
 
 
 ## Methods
+### Step 1: Data-scraping, Data-handling, and Filtering
+
+* One
+* Two
+
+### Step 2: Preliminary analysis and Data vizualisation
+
+* One
+* Two
+
+### Step 3: Generating metadata & Preparing for process
+
+* One
+* Two
+
+### Step 4: Applying Machine learning algorithms
+
+* One
+* Two
+
+### Step 5: Extracting impactful features and Centralization of the Analysis
+
+* One
+* Two
+
+### Step 6: Discussions and Prospects
+
+* One
+* Two
+
 
 
 ## Proposed timeline
