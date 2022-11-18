@@ -1,5 +1,5 @@
 ### Repository organization:
-* There are in total four notebooks:
+* There are in total four notebooks located in the Notebook folder
  * The first is <code>Group and make into csv.ipynb</code>. It corresponds to how we transformed our raw data to make it into a handy csv file for pandas
  * The second one <code>Initial_analysis.ipynb</code>. It contains the preliminary analysis of the data. That is when we chose to separate the analysis for the two datasets (__BeerAdvocate__ and __RateBeer__). This will be explained later.
  * The third one <code>metadata_ba.ipynb</code> is then a scratch on the building of extra features from BeerAdvocate dataset.
