@@ -39,14 +39,7 @@ Here is a list of the additional datasets we should be using:
 * Drop data relative to beers that don't have enough reviews (50 seems like a good value with pur analysis up to date, but we might change it in hindsight)
 * We might focus the analysis on the US for the BeerAdvocate dataset due 73% coverage of the dataset by American users. Also, we think the fact that users are not American might affect the quality of lexicon and hence, our analysis. This is still to be determined.
 
-### Step 3: Generating metadata & Preparing for process
-
-* Generate the following metadata: (difference between every rating and the average rating for that beer, binary value {1: above average rating, 0: below average rating} for every review (average rating is the average for that beer), Matching between country of beer, number of reviews written by each user, length of review, complexity of lexicon used (inverse of frequency of that word being used in “normal” english), relative time between 1st review for a given beer and the given review, popularity of each beer (number of reviews at the time of review), prevalence of beer drinking in the country of the user.
-* Drop rows for which the metadata is not available (again, we don't have to be stingy)
-* Normalize features (the normalization should depend on the distribution from Step1 of the different features.
-* We are still thinking if it would be better to translate the reviews that are not in English (which directly affects review meaning, and lexicon as well). Otherwise, we use complexity of lexicon in the review language but we get less reviews of the same language.
-
-### Step 3: Generating metadata and preprocessing New
+### Step 3: Generating metadata and preprocessing
 - Generate the following metadata:
   1. Difference between a reviewer's specific rating and the average rating for that beer (binary value depending on whether the user's rating was below or above the average rating)
   2. Both user and country location data, and a boolean value depending on whether they are matching or not
@@ -79,7 +72,7 @@ These help us measure trends and make comparisons among different populations of
 
 
 
-## Proposed timeline
+##  Timeline
 
 * Step 1-2: 23/11/2022 (clean into function files what has be done already)
 * (Homework 2)
