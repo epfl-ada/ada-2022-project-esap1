@@ -5,6 +5,7 @@
  * The third one <code>metadata_ba.ipynb</code> is then a scratch on the building of extra features from BeerAdvocate dataset.
  * The fourth one <code>metadata_rb_ipynb</code> is the same for RateBeer dataset.
 
+View our datastory here: https://sylveri.github.io/ada/
 # Is deliciousness in the taste buds of the drinker? 
 
 ## Abstract
@@ -19,7 +20,7 @@ To see whether our gut instinct is right, we will analyze the Beer Reviews datas
 3) Which of our features is most predictive?
 4) Why could that be the case?
 
-## TODO: Why are these questions important? What can we do/How can we utilize our conclusions?
+If there is a meaningful connection here, some potential use cases of these findings would be being able to better market certain types of beer to users who are more likely to be receptive to them in order to consistently score above average reviews.
 
 ## Proposed additional datasets:
 Here is a list of the additional datasets we should be using:
