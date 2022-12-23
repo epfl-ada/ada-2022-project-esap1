@@ -22,11 +22,6 @@ To see whether our gut instinct is right, we will analyze the Beer Reviews datas
 
 If there is a meaningful connection here, some potential use cases of these findings would be being able to better market certain types of beer to users who are more likely to be receptive to them in order to consistently score above average reviews.
 
-## Proposed additional datasets:
-Here is a list of the additional datasets we should be using:
-  * This [page](https://en.wikipedia.org/wiki/List_of_countries_by_beer_consumption_per_capita) lists the __beer consumption of all countries per capita__. We should be using BeautifulSoup, and Request libraries to extract the table from the html link and transform it into a Pandas dataframe. This data will give us insights on the prevalance of each reviewer to beer consumption. With it, we can make a new feature, consumption, that would take the nationality of the reviewer and map it to the corresponding average consumption. Although, reviewers may consume more beers than the average, we make the assumption that it is still representative of prevalence to beer consumption. We will set boundaries before the analysis to be sure to have sufficient reviews from countries and enough reviewers.
-  * The [BeerInfo](https://beerinfo.com/beer-consumption-by-state-per-capita/) website provides the same kind of data as the previous link, but for each states in the United States. Since Americans represent 86% of the reviewers, we thought it would be insightful to apply the same process as the previous additional dataset. Variance in consumption might be less than for the international dataset since we are only studying one country, but the data set will be much richer so this compensates.
-
 ## Methods
 ### Step 1: Data-scraping, Data-handling, and Filtering
 
@@ -37,21 +32,18 @@ Here is a list of the additional datasets we should be using:
 
 * Analyze and visualize the overall distributions of ratings inter and intra beer, of nationality of users and breweries, of number of raitngs inter and intra beer, 
 * Compare BeerAdvocate and RateBeer to see if they can be merged (they can't, the distribution don't overlap quite significantly)
-* Drop data relative to beers that don't have enough reviews (50 seems like a good value with pur analysis up to date, but we might change it in hindsight)
-* We might focus the analysis on the US for the BeerAdvocate dataset due 73% coverage of the dataset by American users. Also, we think the fact that users are not American might affect the quality of lexicon and hence, our analysis. This is still to be determined.
+* Drop data relative to beers that have only 1 review
+* We will focus the analysis on the US for the BeerAdvocate dataset due 73% coverage of the dataset by American users. Also, we think the fact that users are not American might affect the quality of lexicon and hence, our analysis. This is still to be determined.
 
 ### Step 3: Generating metadata and preprocessing
 - Generate the following metadata:
-  1. Difference between a reviewer's specific rating and the average rating for that beer (binary value depending on whether the user's rating was below or above the average rating)
+  1. Difference between a reviewer's specific rating and the average rating for that beer 
   2. Both user and country location data, and a boolean value depending on whether they are matching or not
   3. The number of reviews written by each reviewer
   4. Length of review
   5. Complexity of the lexicon used for the review 
   6. relative time between user's review and the first review of a given beer
-  7. Popularity of each beer
-  8. Prevalence of beer in the country of the reviewer
-  9. For US users, their state and region within the United States
-  10. For Non US users, their region within their continent  
+  9. Group and replace countries and states by areas
   
 These help us measure trends and make comparisons among different populations of people. For example, do East coast Americans review and drink more beer than West Coast Americans? Perhaps one nationality or group of reviewers uses more sophisticated English in their reviews, possibly demonstrating that they are more saavy about beer. Adding these features could help us find out.
 
@@ -59,13 +51,11 @@ These help us measure trends and make comparisons among different populations of
 
 * Train and Test split (no Validation test since we are using cross-validation)
 * Do a linear regression with X = (features selected and created), Y = (rating - average_rating_for_that_beer)
-* Do a logistic regression with X = (features selected and created), Y = (1 if ratings above average for that beer; 0 if below)
-* (This we are still discussing whether to do it or not) Do a single layer NN regression with  X = (features selected and created) and both Y = (rating - average_rating_for_that_beer)  Y = (1 if ratings above average for that beer; 0 if below)
 
 ### Step 5: Extracting impactful features and Centralization of the Analysis
 
-* Extract most impactful features by taking those that have a higher coefficient (and maybe take into consideration Pearson's coefficient/ mutual information as well; see question for TAs), for NN look at questions for TAs
-* Depending on which features turn out to be most important, do a soecific deep dive in that (e.g. let's say that the match between nationality of user and beer is the most impactful, then we might look further into which nation care the most that the beer is from their own country. Other similar analysis might be done for other features)
+* Extract most impactful features by taking those that give the biggest contribution to the explanation of the variance. Hypothesize and eventually test the reason why those are actually the most impactful
+* Depending on which features turn out to be most important, do a specific deep dive in that (e.g. let's say that the match between nationality of user and beer is the most impactful, then we might look further into which nation care the most that the beer is from their own country. Other similar analysis might be done for other features)
 
 ### Step 6: Discussions and Prospects
 
